@@ -116,3 +116,33 @@
   color: whitesmoke;
   transform: scale(1.1); /* Grossissement du bouton */
 }
+
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reversed {
+    flex-direction: column;
+    align-items: center; /* Centrage horizontal */
+  }
+
+  .image-block {
+    width: 100%;
+    max-width: 400px; /* Réduit la taille de l’image */
+    padding: 0 20px;
+  }
+
+  .image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .text-block {
+    width: 100%;
+    padding: 0px 0px;
+    text-align: center; /* Centrage du texte si souhaité */
+  }
+
+  .content-row {
+    gap: 20px;
+  }
+}

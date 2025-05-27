@@ -9,8 +9,7 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} /> {/* Route vers Home */}
-      <Route path="*" element={<App />} /> {/* Route par défaut */}
+      <Route path="*" element={<Home />} /> {/* Route vers Home */}
     </Routes>
   </BrowserRouter>
 );
