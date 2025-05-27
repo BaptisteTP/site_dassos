@@ -1,8 +1,13 @@
-import React from 'react'
-import Home from './pages/Home.jsx'
+import React from 'react';
+import Home from './pages/Home.jsx';
 
 function App() {
-  return <Home />
+  try {
+    return <Home />;
+  } catch (error) {
+    console.error("Erreur dans Home.jsx :", error);
+    return <div>Erreur détectée</div>;
+  }
 }
 
-export default App
+export default App;

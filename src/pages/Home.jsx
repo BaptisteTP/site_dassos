@@ -6,6 +6,7 @@ import mission from '../assets/mission.jpg';
 import evenement from '../assets/evenement.jpg';
 
 function Home() {
+  console.log("🏠 Le composant Home est monté");
   const [missionVisible, setMissionVisible] = useState(false);
   const [eventVisible, setEventVisible] = useState(false);
   const missionRef = useRef(null);
