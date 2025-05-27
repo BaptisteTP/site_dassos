@@ -66,21 +66,27 @@
 /* 📱 Mobile responsive adjustments */
 @media screen and (max-width: 480px) {
   .carousel-container {
-    aspect-ratio: 4 / 3;  /* Plus haut pour les petits écrans */
+    aspect-ratio: 4 / 3; /* Plus haut pour les petits écrans */
     max-width: 100%;
     border-width: 3px;
     border-radius: 8px;
+    overflow: hidden;
+    touch-action: pan-x; /* Enable horizontal touch gestures */
   }
 
   .carousel-button {
-    width: 32px;
-    height: 32px;
-    font-size: 1.2rem;
+    display: none; /* Hide buttons on mobile */
   }
+}
 
-  .carousel-button.left,
-  .carousel-button.right {
-    left: 5px;
-    right: 5px;
-  }
+/* Enable touch gestures for carousel */
+.carousel-track {
+  touch-action: pan-x;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-slide {
+  scroll-snap-align: start;
 }
