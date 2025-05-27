@@ -47,7 +47,6 @@
 
 .text-block {
   flex: 1;
-  padding: 10px;
 }
 
 /* Texte en noir */
@@ -65,7 +64,6 @@
 
 .image-block {
   flex: 1;
-  padding: 10px;
 }
 
 .image-block img {
@@ -122,12 +120,14 @@
   .content-row.reversed {
     flex-direction: column;
     align-items: center; /* Centrage horizontal */
+    overflow: hidden; /* Empêche le dépassement horizontal */
   }
 
   .image-block {
     width: 100%;
     max-width: 400px; /* Réduit la taille de l’image */
     padding: 0 20px;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
   }
 
   .image-block img {
@@ -140,9 +140,12 @@
     width: 100%;
     padding: 10px 20px;
     text-align: center; /* Centrage du texte si souhaité */
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
   }
 
   .content-row {
     gap: 20px;
+    padding: 0 10px; /* Ajout de padding pour éviter le dépassement */
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
   }
 }
