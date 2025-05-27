@@ -1,14 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import NosActions from './pages/NosActions';
+import React from 'react'
+import Home from './pages/Home.jsx'
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/Home" element={<Home />} />
-      <Route path="/nos-actions" element={<NosActions />} />
-    </Routes>
-  );
+  return <Home />
 }
 
-export default App;
+export default App
