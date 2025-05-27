@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './Home.css';
+import '../index.css'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import mission from '../assets/mission.jpg';
