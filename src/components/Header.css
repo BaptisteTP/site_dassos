@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 80px;
+  background-color: rgb(31, 204, 8);
+  position: relative;
+}
+
+/* Crée un espace qui pousse la nav au centre */
+.header img {
+  height: 60px;
+  background-image: url('.assets/logo.jpeg');
+}
+
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff; /* couleur de l’animation */
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffffff; /* change la couleur au hover */
+}
+
+.nav a:hover::after {
+  width: 100%; /* ligne s'étend au hover */
+}
