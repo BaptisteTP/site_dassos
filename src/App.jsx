@@ -1,13 +1,14 @@
-import React from 'react';
-import Home from './pages/Home.jsx';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import NosActions from './pages/NosActions'; // assure-toi que ce fichier existe
 
 function App() {
-  try {
-    return <Home />;
-  } catch (error) {
-    console.error("Erreur dans Home.jsx :", error);
-    return <div>Erreur détectée</div>;
-  }
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/nos-actions" element={<NosActions />} />
+    </Routes>
+  );
 }
 
 export default App;

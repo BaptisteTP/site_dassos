@@ -17,7 +17,7 @@ function Header() {
       </div>
 
       <div className={`nav ${isMenuOpen ? 'active' : ''}`}>
-        <Link to="/Home">Accueil</Link>
+        <Link to="/">Accueil</Link>
         <Link to="#">A propos de nous</Link>
         <Link to="#">Nous aider</Link>
         <Link to="/nos-actions">Nos actions</Link>
