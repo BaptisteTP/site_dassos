@@ -1,23 +1,35 @@
 import { Link } from 'react-router-dom';
-import reactLogo from '../assets/logo.jpeg'
-import './Header.css'
+import { useState } from 'react';
+import reactLogo from '../assets/logo.jpeg';
+import './Header.css';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
-  <div className="logo">
-    <img src={reactLogo} alt="Logo" />
-  </div>
-  <nav className="nav">
-    <Link to="/Home">Accueil</Link>
-    <a href="#">A propos de nous</a>
-    <a href="#">Nous aider</a>
-    <Link to="/nos-actions">Nos actions</Link>
-  </nav>
-  <div className="spacer" /> {/* vide pour équilibrer */}
-</header>
+      <div className="logo">
+        <img src={reactLogo} alt="Logo" />
+      </div>
 
-  )
+      <div className={`nav ${isMenuOpen ? 'active' : ''}`}>
+        <Link to="/Home">Accueil</Link>
+        <Link to="#">A propos de nous</Link>
+        <Link to="#">Nous aider</Link>
+        <Link to="/nos-actions">Nos actions</Link>
+      </div>
+
+      <div className="burger" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
