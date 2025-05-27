@@ -74,6 +74,12 @@
     touch-action: pan-x; /* Enable horizontal touch gestures */
   }
 
+  .carousel-slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
+  }
+
   .carousel-button {
     display: none; /* Hide buttons on mobile */
   }
